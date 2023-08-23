@@ -5,7 +5,7 @@ const express = require('express')
 
 const app = express()
 
-const url = 'https://theguardian.com/uk'
+const url = 'https://www.youtube.com/'
 
 // returns a promise
 axios(url)
@@ -15,7 +15,7 @@ axios(url)
         const $ = cheerio.load(html)
         const articles = []
 
-        $('.dcr-12ilguo', html).each(function() {
+        $('.yt-simple-endpoint', html).each(function() {
             const title = $(this).text()
             const url = $(this).find('a').attr('href')
             articles.push({
